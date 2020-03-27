@@ -16,6 +16,7 @@ import { AppIntercepter } from './app.intercepter';
         },
       ],
       logMessages: true,
+      prefetchCount: 32,
       queueName: 'test',
       middleware: [AppMiddleware1, AppMiddleware2],
       intercepters: [AppIntercepter],

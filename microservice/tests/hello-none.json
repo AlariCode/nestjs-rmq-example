@@ -1,0 +1,15 @@
+[
+  {
+    "login": "guest",
+    "password": "guest",
+    "host": "localhost",
+    "appId": "test-svc",
+    "topic": "hello-none",
+    "isRpc": false,
+    "exchange": "test",
+    "content": {
+        "data": "test",
+        "test": "test"
+    }
+  }
+]
