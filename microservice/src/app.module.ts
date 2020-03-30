@@ -20,6 +20,7 @@ import { AppIntercepter } from './app.intercepter';
       queueName: 'test',
       middleware: [AppMiddleware1, AppMiddleware2],
       intercepters: [AppIntercepter],
+      serviceName: 'myMicroservice',
     }),
   ],
   controllers: [AppController],

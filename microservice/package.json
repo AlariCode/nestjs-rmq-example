@@ -23,7 +23,7 @@
 		"@nestjs/common": "^6.7.2",
 		"@nestjs/core": "^6.7.2",
 		"@nestjs/platform-express": "^6.7.2",
-		"nestjs-rmq": "^1.4.5-beta-5",
+		"nestjs-rmq": "^1.4.5-beta-8",
 		"reflect-metadata": "^0.1.13",
 		"rimraf": "^3.0.0",
 		"rxjs": "^6.5.3"
