@@ -1,16 +1,15 @@
 import { RMQPipeClass, Message } from 'nestjs-rmq';
 
-export class AppMiddleware1 implements RMQPipeClass {
-  async transform(msg: Message): Promise<Message> {
-    console.log('Middleware1');
-    return msg;
-  }
+export class AppMiddleware1 extends RMQPipeClass {
+	async transform(msg: Message): Promise<Message> {
+		console.log('Middleware1');
+		return msg;
+	}
 }
 
-// tslint:disable-next-line: max-classes-per-file
-export class AppMiddleware2 implements RMQPipeClass {
-  async transform(msg: Message): Promise<Message> {
-    console.log('Middleware2');
-    return msg;
-  }
+export class AppMiddleware2 extends RMQPipeClass {
+	async transform(msg: Message): Promise<Message> {
+		console.log('Middleware2');
+		return msg;
+	}
 }

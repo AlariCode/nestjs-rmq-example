@@ -1,6 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
-import { AppPipe } from './app.pipe';
-import { RMQController, RMQRoute, RMQPipe, Validate, RMQError } from 'nestjs-rmq';
+import { Controller } from '@nestjs/common';
+import { RMQRoute, RMQPipe, Validate, RMQError } from 'nestjs-rmq';
 import { MinLength, IsString } from 'class-validator';
 import { ERROR_TYPE } from 'nestjs-rmq/dist/constants';
 
@@ -13,9 +12,7 @@ export class Message {
 }
 
 @Controller()
-@RMQController()
 export class AppController {
-	@RMQPipe(AppPipe)
 	@RMQRoute('hello-rpc')
 	@Validate()
 	getHelloRpc(data: Message): string {

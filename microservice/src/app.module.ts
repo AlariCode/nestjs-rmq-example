@@ -5,24 +5,24 @@ import { AppMiddleware1, AppMiddleware2 } from './app.middleware';
 import { AppIntercepter } from './app.intercepter';
 
 @Module({
-  imports: [
-    RMQModule.forRoot({
-      exchangeName: 'test',
-      connections: [
-        {
-          login: 'guest',
-          password: 'guest',
-          host: 'localhost',
-        },
-      ],
-      logMessages: true,
-      prefetchCount: 32,
-      queueName: 'test',
-      middleware: [AppMiddleware1, AppMiddleware2],
-      intercepters: [AppIntercepter],
-      serviceName: 'myMicroservice',
-    }),
-  ],
-  controllers: [AppController],
+	imports: [
+		RMQModule.forRoot({
+			exchangeName: 'test',
+			connections: [
+				{
+					login: 'guest',
+					password: 'guest',
+					host: '192.168.1.35',
+				},
+			],
+			logMessages: true,
+			prefetchCount: 32,
+			queueName: 'test',
+			middleware: [AppMiddleware1, AppMiddleware2],
+			intercepters: [AppIntercepter],
+			serviceName: 'myMicroservice',
+		}),
+	],
+	controllers: [AppController],
 })
-export class AppModule {}
+export class AppModule { }
